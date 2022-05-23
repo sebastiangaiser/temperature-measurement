@@ -1,0 +1,11 @@
+[Unit]
+Description=Temp and hum measurement server with Prometheus exporter
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/temp/temp
+Environment="LOCATION=Wohnzimmer"
+
+[Install]
+WantedBy=multi-user.target
